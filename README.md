@@ -1,8 +1,11 @@
-# Sweetalert2::Rails
+# sweetalert2-rails
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sweetalert2/rails`. To experiment with that code, run `bin/console` for an interactive prompt.
+A beautiful, responsive, customizable and accessible (WAI-ARIA) replacement for JavaScript's popup boxes. Zero dependencies.
+https://limonte.github.io/sweetalert2/
 
-TODO: Delete this and the text above, and describe your gem
+This gem will override the rails default confirm dialog with SweetAlert2.
+
+![Alt text](/screenshot.png?raw=true "Screenshot of Alert")
 
 ## Installation
 
@@ -22,7 +25,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add the following to your application.scss file.
+```
+@import "sweetalert2-rails";
+```
+
+Add the following to your application.js file.
+
+```
+//= require sweetalert2-rails
+```
+
+Now when you use data confirm in rails, it will use sweetalert.
+
+```
+link_to 'Delete', delete_path, data: { confirm: 'Are you sure?', text: 'Will
+show up as the dialog text'}
+```
 
 ## Development
 
@@ -32,7 +51,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/sweetalert2-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/carlweis/sweetalert2-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License

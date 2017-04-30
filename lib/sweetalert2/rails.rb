@@ -2,6 +2,6 @@ require "sweetalert2/rails/version"
 
 module Sweetalert2
   module Rails
-    # Your code goes here...
+    class Engine < ::Rails::Engine; end
   end
 end
