@@ -42,6 +42,12 @@ Now when you use data confirm in rails, it will use sweetalert.
 link_to 'Delete', delete_path, data: { confirm: 'Are you sure?', text: 'Will
 show up as the dialog text'}
 ```
+or using plain HTML
+
+```
+<a href="#" data-confirm="Are you sure?" data-text="Are you sure you want to do
+this?">Click Me</a>
+```
 
 ## Development
 
